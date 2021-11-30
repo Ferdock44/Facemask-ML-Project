@@ -1,11 +1,14 @@
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import numpy as np
+from sklearn.model_selection import train_test_split
 
-data_dir = './images/project'
+data_dir = './images/project/train'
+test_data_dir = './images/project/test'
 
 IMG_SIZE = 224
 BATCH_SIZE = 64
+
 
 generator = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255, validation_split=0.2)
 

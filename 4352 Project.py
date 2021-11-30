@@ -1,12 +1,13 @@
-import keras.models
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras import layers
-from tensorflow.keras.callbacks import EarlyStopping
 import pathlib
 import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
 
-data_dir = pathlib.Path('./images/project/')
+data_dir = pathlib.Path('./images/project/train')
+test_data_dir = pathlib.Path('./images/project/test')
+
 
 train_ds = tf.keras.preprocessing.image_dataset_from_directory(
     data_dir,
